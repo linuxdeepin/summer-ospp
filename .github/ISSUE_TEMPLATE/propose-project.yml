@@ -1,0 +1,168 @@
+name: 为 OSPP 命题 / Propose an OSPP project
+description: Propose an OSPP project.
+title: "[OSPP 2025] "
+labels: ["2025", "project", "proposed"]
+body:
+- type: markdown
+  attributes:
+    value: |
+      ⚠️ 如您是学生，请不要使用此模板。此模板为 OSPP 命题模板。
+      ⚠️ If you're a student, please skip this template. This template is used by mentors to propose their OSPP Project.
+
+- type: textarea
+  id: pre
+  attributes:
+    label: 提示
+    # description: "How do you trigger this bug? Please walk us through it step by step."
+    value: |
+      <!-- 请勿修改或删除此处内容 DO NOT EDIT OR DELETE -->
+      ⚠️ 此处为**导师**命题区，**如您是学生**并想报名参加此项目，请前往 https://summer-ospp.ac.cn/ 进行报名。（报名窗口为 2025 年 5 月 9 日至 2025 年 6 月 9 日）
+      ⚠️ 下面显示的项目仅为草稿，并非最终项目。请以 https://summer-ospp.ac.cn/ 中显示的项目为准。
+
+      ⚠️ This issue is only for **MENTORS**. **IF YOU ARE A STUDENT** and you want to participate in this project, please visit https://summer-ospp.ac.cn/ (The application window is from May 9, 2025 to June 9, 2025)
+      ⚠️ The project shown below is only a draft, not the final project. Please refer to the project shown in https://summer-ospp.ac.cn/
+  validations:
+    required: true
+
+- type: markdown
+  attributes:
+    value: |
+      ⚠️ 请注意，每位导师最多可指导一个项目。
+      ⚠️ 请注意，本届开源之夏不再提供导师奖金。
+
+      ⚠️ Please note, Each mentor can guide at most one project.
+      ⚠️ Please note, OSPP 2025 will no longer provide project completion bonuses to mentors.
+
+- type: markdown
+  attributes:
+    value: |
+      2024 年项目可供参考: https://summer-ospp.ac.cn/2024/org/orgdetail/8867f7ac-c3a6-4d7d-8937-e6209ba1b047
+
+- type: input
+  id: project-name
+  attributes:
+    label: 项目名称 / Project Name
+    description: |
+      项目名称应明确直观的体现出项目的技术和目标任务
+      The project name should clearly and directly reflect the project's technology and target tasks
+    placeholder: "为XXXXXX实现XXXXXX功能"
+  validations:
+    required: true
+
+- type: textarea
+  id: project-description
+  attributes:
+    label: 项目描述 / Project Description
+    description: |
+      项目的相关背景、已有的工作、存在的不足、希望改进的要点、最终项目实现的目标等
+      Provide the project's relevant background, existing work, current deficiencies, improvements needed, and final objectives to be achieved
+  validations:
+    required: true
+
+- type: dropdown
+  id: project-difficulty
+  attributes:
+    label: 项目难度 / Project Difficulty
+    description: |
+      结合项目要求、项目规模、技术难度、项目开发预估工作量、资源限制等因素设置
+      Set based on project requirements, scale, technical difficulty, estimated development workload, and resource limitations
+    options:
+    - 基础
+    - 进阶
+  validations:
+    required: true
+
+- type: textarea
+  id: technical-domain
+  attributes:
+    label: 技术领域 / Technical Domain
+    value: |
+      如：
+      - Cgroups
+      - DTK
+      - Qt
+      - Wayland
+  validations:
+    required: true
+
+- type: textarea
+  id: programming-language
+  attributes:
+    label: 编程语言 / Programming Language
+    value: |
+      如：
+      - C
+      - C++
+      - Golang
+      - Python
+      - QML
+      - Rust
+  validations:
+    required: true
+
+- type: textarea
+  id: project-output-requirements
+  attributes:
+    label: 项目产出要求 / Project Output Requirements
+    description: |
+      明确学生需要做什么，预期达到什么效果
+      Clearly define what students need to accomplish and the expected outcomes
+  validations:
+    required: true
+
+- type: textarea
+  id: project-technical-requirements
+  attributes:
+    label: 项目技术要求 / Project Technical Requirements
+    description: |
+      可从编程语言、技术栈、开发经验等角度提出要求
+      Present requirements from perspectives such as programming language, technology stack, and development experience
+  validations:
+    required: true
+
+- type: textarea
+  id: project-completion-repository
+  attributes:
+    label: 项目成果仓库 / Project Completion Repository
+    description: |
+      本社区已有项目仓库地址，而非新建空仓
+      Use the existing project repository of the community, not a new empty repository
+    value: |
+      https://github.com/linuxdeepin/XXXXXX
+  validations:
+    required: true
+
+# Small size projects should take about 90 hours, medium size projects about 175 hours to complete, and large projects about 350 hours to complete.
+- type: input
+  id: estimated-work-hours
+  attributes:
+    label: 预估工时 / Estimated Work Hours
+    description: |
+      根据项目难度、产出要求、学生水平等因素给出预估的开发工时参考
+      Provide an estimated reference for development hours based on project difficulty, output requirements, and student skill level
+    # value:
+  validations:
+    required: true
+
+- type: textarea
+  id: mentor-info
+  attributes:
+    label: 导师信息 / Mentor Info
+    value: |
+      - 导师姓名: 真实姓名
+      - 导师邮箱: XXXXXX[at]deepin[dot]org / XXXXXX[at]uniontech[dot]com
+      - 导师昵称: username
+      - 贡献邮箱: XXXXXX[at]deepin[dot]org / XXXXXX[at]uniontech[dot]com <!-- git config --global user.email -->
+      - 仓库地址: https://github.com/linuxdeepin/XXXXXX <!-- 会在仓库中针对上面的贡献邮箱进行活跃度检测 -->
+  validations:
+    required: true
+
+- type: textarea
+  id: project-notes
+  attributes:
+    label: 项目备注 / Project Notes
+    description: |
+      项目自身的相关参考资料，比如书籍、论文、博客和相关的项目或 issue 的链接
+      Include related reference materials for the project itself, such as books, papers, blogs, and links to related projects or issues
+  validations:
+    required: true
